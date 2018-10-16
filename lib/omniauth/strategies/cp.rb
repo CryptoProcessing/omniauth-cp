@@ -4,9 +4,9 @@ module OmniAuth
   module Strategies
     class Cp < OmniAuth::Strategies::OAuth2
       option :client_options, {
-        :site => ENV.get('CP_HOST', 'https://cryptoprocessing.io'),
-        :authorize_url => "#{ENV.get('CP_HOST', 'https://cryptoprocessing.io')}/oauth/authorize",
-        :token_url => "#{ENV.get('CP_HOST', 'https://cryptoprocessing.io')}/oauth/token"
+        :site => ENV['CP_HOST'] || 'https://cryptoprocessing.io',
+        :authorize_url => "#{ENV['CP_HOST'] || 'https://cryptoprocessing.io')}/oauth/authorize",
+        :token_url => "#{ENV['CP_HOST'] || 'https://cryptoprocessing.io')}/oauth/token"
       }
 
       def request_phase

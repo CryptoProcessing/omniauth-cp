@@ -42,5 +42,3 @@ module OmniAuth
     end
   end
 end
-
-OmniAuth.config.add_camelization 'cp', 'CP'
